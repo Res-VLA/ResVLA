@@ -354,6 +354,42 @@
       <div class="columns is-centered">
         <div class="column is-full">
           <div class="content">
+            <h2 class="title is-3">Simpler Metrics</h2>
+            <p style="display: flex; justify-content: center; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap;">
+              <img src="static/images/GoogleRobotMetrics.png" alt="SimplerEnv Google Robot Metrics"
+                class="blend-img-background center-image" style="max-width: 48%; height: auto;" />
+              <img src="static/images/widowxMetrics.png" alt="SimplerEnv WidowX Bridge Metrics"
+                class="blend-img-background center-image" style="max-width: 48%; height: auto;" />
+            </p>
+            <p>
+              <strong>Performance Comparison on SimplerEnv (Google Robot).</strong>
+              Four tasks are evaluated: Pick Coke Can (<strong>PC</strong>), Move Near (<strong>MN</strong>), Open
+              Drawer (<strong>OD</strong>), and Open Top Drawer (<strong>OTD</strong>). The <strong>best</strong>,
+              <u>second-best</u>, and
+              <span style="text-decoration-line: underline; text-decoration-style: double;">third-best</span>
+              results are highlighted (excluding baselines with spatial co-training). Results show that our
+              <strong>ResVLA</strong>, learned entirely from scratch, achieves competitive performance.
+            </p>
+            <p>
+              <strong>Performance Comparison on SimplerEnv (WidowX/Bridge).</strong>
+              We evaluate four tasks: Spoon on Towel (<strong>ST</strong>), Carrot on Plate (<strong>CP</strong>),
+              Stack Blocks (<strong>SB</strong>), and Eggplant in Basket (<strong>EB</strong>). The
+              <strong>best</strong>, <u>second-best</u>, and
+              <span style="text-decoration-line: underline; text-decoration-style: double;">third-best</span>
+              results are highlighted. Results show our <strong>ResVLA</strong> achieves competitive performance,
+              particularly in the Eggplant task, despite lacking large-scale pre-training.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full">
+          <div class="content">
             <h2 class="title is-3">Efficiency Results</h2>
             <p>
               <img src="static\images\efficiencyMetrics.png" alt="Directional Weight Score"
