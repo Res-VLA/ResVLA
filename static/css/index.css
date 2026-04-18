@@ -112,17 +112,32 @@ body {
 
 .results-carousel {
   overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .results-carousel .item {
-  margin: 5px;
+  margin: 8px;
   overflow: hidden;
-  padding: 20px;
+  padding: 8px;
   font-size: 0;
 }
 
 .results-carousel video {
   margin: 0;
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  background: #000;
+  border-radius: 10px;
+}
+
+.results-carousel .video-caption {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .slider-pagination .slider-page {
