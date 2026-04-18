@@ -91,10 +91,9 @@
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                <!-- Arxiv PDF link -->
+                <!-- Paper PDF link -->
                 <span class="link-block">
-                  <!-- TODO: Change to ResVLA arxiv -->
-                  <a href="https://arxiv.org/pdf/2506.01583" target="_blank"
+                  <a href="static/pdfs/ResVLA.pdf" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -117,8 +116,8 @@
 
 
                 <!-- ArXiv abstract Link -->
-                <span class="link-block">
-                  <!-- TODO: Change to ResVLA arxiv -->
+                <!-- <span class="link-block">
+                  TODO: Change to ResVLA arxiv
                   <a href="https://arxiv.org/abs/2506.01583" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -126,7 +125,7 @@
                     </span>
                     <span>ArXiv</span>
                   </a>
-                </span>
+                </span> -->
               </div>
             </div>
           </div>
@@ -199,16 +198,16 @@
             <p>
               Bridging high-level semantic understanding with low-level physical control remains a persistent challenge
               in embodied intelligence, stemming from the fundamental spatiotemporal scale mismatch between cognition
-              and action. Existing generative policies typically adopt a "Generation-from-Noise" paradigm, which
-              disregards this disparity, leading to representation inefficiency and optimization "Loss Collapse". In
-              this work, we propose ResVLA, a novel architecture that shifts the paradigm to "Refinement-from-Intent".
-              Recognizing that robotic motion naturally decomposes into global intent and local dynamics, ResVLA
+              and action. Existing generative VLA policies typically adopt a "Generation-from-Noise" paradigm, which
+              disregards this disparity, leading to representation inefficiency and weak condition alignment during
+              optimization. In this work, we propose ResVLA, an architecture that shifts the paradigm to
+              "Refinement-from-Intent." Recognizing that robotic motion naturally decomposes into global intent and local dynamics, ResVLA
               utilizes spectral analysis to decouple control into a deterministic low-frequency anchor and a stochastic
               high-frequency residual. By anchoring the generative process on the predicted intent, our model focuses
-              strictly on refining local dynamics via a residual diffusion bridge. Extensive evaluations on LIBERO and
-              the challenging LIBERO-Plus benchmarks demonstrate that ResVLA achieves state-of-the-art performance.
-              Notably, our approach exhibits exceptional robustness against semantic drift and kinematic perturbations
-              while achieving significantly faster convergence than standard generative baselines.
+              strictly on refining local dynamics via a residual diffusion bridge. Extensive simulation experiments
+              show that ResVLA achieves competitive performance, strong robustness to language and robot embodiment
+              perturbations, and faster convergence than standard generative baselines. It also demonstrates strong
+              performance in real-world robot experiments.
             </p>
           </div>
         </div>
@@ -274,15 +273,13 @@
             </p>
             <p>
               <strong style="color: #FF69B4; font-weight: bold;">Overview of the ResVLA framework.</strong> The
-              architecture consists of two cascading stages: (1) Intent Anchoring: A VLM backbone
-              extracts multimodal features and deterministically regresses the low-frequency semantic intent via the
-              Intent (1) Intent Anchoring:
-              The Intent Anchoring Module leverages VLM features to regress the low-frequency component, constructing a
-              condition-dependent
-              source p<sub>0</sub>(x|c). (2) Residual Bridging: A flow matching expert learns the residual transport
-              path (red
-              arrow) from this anchor to the full
-              action xgt, focusing on refining high-frequency dynamics.
+              architecture consists of two cascading stages: (1) Intent Anchoring: The Intent Anchoring Module
+              leverages VLM features to regress the low-frequency component x<sub>S</sub>, constructing a
+              condition-dependent source p<sub>0</sub>(x|c). (2) Residual Bridging: A flow matching expert learns the
+              residual transport path (red arrow) from this anchor to the full action x<sub>gt</sub>, focusing on
+              refining high-frequency dynamics. ResVLA thus disentangles action generation into a hierarchical
+              bridging problem: first anchoring low-frequency semantic intent, then refining high-frequency execution
+              dynamics via flow matching.
             </p>
           </div>
         </div>
