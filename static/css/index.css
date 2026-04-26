@@ -147,6 +147,13 @@ body {
   font-size: 0.95rem;
 }
 
+.video-acknowledgement .acknowledgement-link {
+  color: #3273dc;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .slider-pagination .slider-page {
   background: #000000;
 }
@@ -154,5 +161,4 @@ body {
 .eql-cntrb { 
   font-size: smaller;
 }
-
 
