@@ -140,6 +140,13 @@ body {
   font-weight: 600;
 }
 
+.video-acknowledgement {
+  max-width: 900px;
+  margin: 1rem auto 0;
+  color: #4a4a4a;
+  font-size: 0.95rem;
+}
+
 .slider-pagination .slider-page {
   background: #000000;
 }
@@ -147,6 +154,5 @@ body {
 .eql-cntrb { 
   font-size: smaller;
 }
-
 
 
